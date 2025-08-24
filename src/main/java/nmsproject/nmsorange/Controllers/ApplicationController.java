@@ -2,7 +2,6 @@ package nmsproject.nmsorange.Controllers;
 
 import nmsproject.nmsorange.Services.ApplicationService;
 import nmsproject.nmsorange.dto.ApplicationDTO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +13,6 @@ import java.util.Optional;
 @RequestMapping("/api/applications")
 public class ApplicationController {
 
-    @Autowired
     private ApplicationService applicationService;
 
     @GetMapping

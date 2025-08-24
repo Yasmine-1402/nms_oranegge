@@ -138,6 +138,7 @@ public class KnowledgeBaseService {
         knowledgeBase.setAttachedDocs(knowledgeBaseDTO.getAttachedDocs());
         knowledgeBase.setApplicationVersion(knowledgeBaseDTO.getApplicationVersion());
         knowledgeBase.setImageUrl(knowledgeBaseDTO.getImageUrl());
+        knowledgeBase.setDescription(knowledgeBaseDTO.getDescription());
         knowledgeBase.setApplicationId(knowledgeBaseDTO.getApplicationId());
         knowledgeBase.setReportedByUserId(knowledgeBaseDTO.getReportedByUserId());
         return knowledgeBase;
@@ -155,6 +156,7 @@ public class KnowledgeBaseService {
         knowledgeBaseDTO.setCreatedAt(knowledgeBase.getCreatedAt());
         knowledgeBaseDTO.setUpdatedAt(knowledgeBase.getUpdatedAt());
         knowledgeBaseDTO.setVendorId(knowledgeBase.getVendor().getId());
+        knowledgeBaseDTO.setDescription(knowledgeBase.getDescription());
         knowledgeBaseDTO.setApplicationId(knowledgeBase.getApplicationId());
         knowledgeBaseDTO.setReportedByUserId(knowledgeBase.getReportedByUserId());
         return knowledgeBaseDTO;

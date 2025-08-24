@@ -34,6 +34,9 @@ public class KnowledgeBase {
     @Column(name = "application_version")
     private String applicationVersion;
 
+    @Column(name = "description")
+    private String description;
+
     @Column(name = "image_url")
     private String imageUrl;
 
