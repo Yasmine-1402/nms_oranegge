@@ -1,5 +1,6 @@
 package nmsproject.nmsorange.Controllers;
 
+import lombok.RequiredArgsConstructor;
 import nmsproject.nmsorange.Services.ApplicationService;
 import nmsproject.nmsorange.dto.ApplicationDTO;
 import org.springframework.http.ResponseEntity;
@@ -11,9 +12,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/applications")
+@RequiredArgsConstructor
 public class ApplicationController {
 
-    private ApplicationService applicationService;
+    private final ApplicationService applicationService;
 
     @GetMapping
     public ResponseEntity<List<ApplicationDTO>> getAllApplications() {

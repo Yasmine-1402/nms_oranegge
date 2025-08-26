@@ -36,11 +36,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/api/applications/**").hasAnyRole("USER", "ADMIN")
                         .requestMatchers("/api/user/**").hasAnyRole("USER", "ADMIN")
                         .requestMatchers(
                                 "/v3/api-docs/**",
                                 "/swagger-ui.html",
                                 "/swagger-ui/**"
+
                         ).permitAll()
 
                         .anyRequest().authenticated()
@@ -57,6 +59,7 @@ public class SecurityConfig {
                 "http://localhost:4200",
                 "http://127.0.0.1:4200",
                 "http://localhost:8080",
+                "http://localhost:8081",
                 "http://127.0.0.1:8080"
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
